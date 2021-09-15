@@ -24,7 +24,7 @@ if not args.city_file:
             f"The humidity is: {weather.weather_cli(city)['main']['humidity']}")
     if args.desc:
         lst.append(
-            f"The description is: {weather.weather_cli(city)['weather']['description']}")
+            f"The description is: {weather.weather_cli(city)['weather'][0]['description']}")
     for x in lst:
         print(x)
 else:
